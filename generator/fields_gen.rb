@@ -109,6 +109,8 @@ HERE
             :base(Tags.#{field[:name]}, val) {}
         public #{field[:name]}(#{field[:base_type]} val, bool showMilliseconds)
 	    :base(Tags.#{field[:name]}, val, showMilliseconds) {}
+        public #{field[:name]}(#{field[:base_type]} val, QuickFix.Fields.Converters.TimeStampPrecision timestampPrecision)
+            :base(Tags.#{field[:name]}, val, timestampPrecision) {}
 #{fix_values(field)}
     }
 
